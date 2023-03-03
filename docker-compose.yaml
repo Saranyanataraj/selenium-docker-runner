@@ -32,7 +32,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
     volumes:
-      - ./search-result-from-docker1:/usr/share/udemy/test-output
+      - ./output/search-result-from-docker1:/usr/share/udemy/test-output
   search-module2:
     image: saranya93/selenium-docker
     depends_on:
@@ -43,7 +43,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
     volumes:
-      - ./search-result-from-docker2:/usr/share/udemy/test-output
+      - ./output/search-result-from-docker2:/usr/share/udemy/test-output
   book-flight-module1:
      image: saranya93/selenium-docker
      depends_on:
@@ -54,7 +54,7 @@ services:
        - HUB_HOST=hub
        - MODULE=book-flight.xml
      volumes:
-       - ./bookflight-result-from-docker1:/usr/share/udemy/test-output
+       - ./output/bookflight-result-from-docker1:/usr/share/udemy/test-output
   book-flight-module2:
     image: saranya93/selenium-docker
     depends_on:
@@ -65,7 +65,7 @@ services:
       - HUB_HOST=hub
       - MODULE=book-flight.xml
     volumes:
-      - ./bookflight-result-from-docker2:/usr/share/udemy/test-output
+      - ./output/bookflight-result-from-docker2:/usr/share/udemy/test-output
 
 
 
